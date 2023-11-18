@@ -4,11 +4,17 @@ import './App.css'
 function App() {
   let [count, setCount] = useState(0)
   function Plus(){
-     setCount(count + 1);
+    if(count < 20){
+      setCount(prevCount => prevCount + 1);
+      setCount(prevCount => prevCount + 1);
+      // setCount(count + 1);  
+    }
      
   }
   function Minus(){
-    setCount(count - 1);
+    if(count > 0 ){
+      setCount(count - 1);
+    }
   }
   function Reset(){
     setCount(0)
